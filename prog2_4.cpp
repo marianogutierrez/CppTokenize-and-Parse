@@ -40,7 +40,7 @@ int main(int argc, char const *argv[]) {
     while(!file.eof()) {
         getline(file,line); // gets the first line  and sticks it into line var
         try {
-            makeTokens -> Tokenize(line); // tokenize the first line // calls tokenize function on the single line
+            tokenize -> Tokenize(line); // tokenize the first line // calls tokenize function on the single line
         }
         catch(string e) {
             std::cout << "Error on line " << lineNum << ": " << e <<std::endl; // e is the error from tokenize.
@@ -92,6 +92,7 @@ int main(int argc, char const *argv[]) {
             while(!oss.eof()) {
                 oss >> tmp; // critical
                 vecStoretemp.push_back(tmp);
+                vecStore.push_back(tmp);
             }
 
             indicator = parseIt->Parse(vecStoretemp);
@@ -119,7 +120,7 @@ int main(int argc, char const *argv[]) {
         }
     }
     delete parseIt;
-    delete Tokenizer;
+    delete tokenize;
     parseIt = 0; // avoid dangling pointers. See Sebesta ch.6.12
     return 0;
 }
