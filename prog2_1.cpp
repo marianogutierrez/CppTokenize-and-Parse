@@ -38,8 +38,8 @@ void Tokenizer::Tokenize(string Tokenize) {
             vector<string> tok2;
             tok2.push_back(store);
             this -> data -> push(tok2);
-            this -> lines++;
         }
+        this -> lines++;
     } // end while
 } // end method
 
