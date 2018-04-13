@@ -33,11 +33,12 @@ using namespace std;
 
       int len = makeTokens -> lines;
       int len2;
+
       while(len != 0) {
       vecTokens =  makeTokens -> GetTokens(); // ensure I get the first line in its entirety
       len2 = vecTokens -> size();
-      for(int i =0; i < len2; i++) {
-        if(i == len2 -1) {
+      for(int i = 0; i < len2; i++) {
+        if(i == (len2 - 1)) {
           cout << vecTokens -> at(i) << endl;
         }
         else {
