@@ -16,7 +16,7 @@ using namespace std;
     fstream file(argv[1]); // input file
     Tokenizer *makeTokens = new Tokenizer();
     std::vector<string> *vecTokens = new vector<string>();
-  //  std::vector<string> *tokContainer = new vector<string>();
+    std::vector<string> *tokContainer = new vector<string>();
     int lineNum = 1;
     std::string line;
     while(!file.eof()) {
@@ -28,28 +28,7 @@ using namespace std;
             std::cout << "Error on line " << lineNum << ": " << e <<std::endl; // e is the error from tokenize.
             return 0;
         }
-        lineNum++;
-      }
-
-      int len = makeTokens -> lines;
-      int len2;
-
-      while(len != 0) {
-      vecTokens =  makeTokens -> GetTokens(); // ensure I get the first line in its entirety
-      len2 = vecTokens -> size();
-      for(int i = 0; i < len2; i++) {
-        if(i == (len2 - 1)) {
-          cout << vecTokens -> at(i) << endl;
-        }
-        else {
-          cout << vecTokens -> at(i) << ",";
-        }
-      }
-      len--;
-      }
-      // below lies the hours of my life gone
-
-        /*try {
+        try {
             *vecTokens =  *makeTokens -> GetTokens(); // passes in a pointer to a reference with the first set of tokens
         }
         catch(string e) {
@@ -63,11 +42,10 @@ using namespace std;
         tokContainer -> push_back("\0"); // to know when to print
     }
 
-
     for(int i = 0; i < tokContainer -> size(); i++) {
     if(tokContainer -> at(i) == "\0") {
         cout << endl;
-        continue;
+        
     }
     else if( i < tokContainer -> size() && tokContainer -> at(i + 1) == "\0") {
         cout << tokContainer -> at(i);
@@ -75,12 +53,12 @@ using namespace std;
     else {
         cout << tokContainer->at(i) << ",";
     }
-} */
+}
 
     // memory management
     delete makeTokens;
     delete vecTokens;
-    //delete tokContainer;
+    delete tokContainer;
     return 0;
 
 }

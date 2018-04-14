@@ -20,13 +20,14 @@ void Tokenizer::Tokenize(string Tokenize) {
     string store; // does get each by spaces
     while(!input.eof()) {
         input >> store; // takes a single token delimited by the space
+        vector<string> tok;
         if(store == "push" ||  store == "pop" ||
            store == "add" || store  == "sub" || store == "mul" || store == "div" ||
            store  == "mod"|| store == "skip" || store == "save" || store == "get" ) {
             // push the token
-            vector<string> tok1; // will be deleted once subroutine gone
-            tok1.push_back(store);
-            this -> data -> push(tok1); // FIFO
+            //vector<string> tok1; // will be deleted once subroutine gone
+            tok.push_back(store);
+          //  this -> data -> push(tok1); // FIFO
         }
         else { // 2nd check so must be
             for(int i = 0; i < store.length(); i++) {
@@ -35,11 +36,11 @@ void Tokenizer::Tokenize(string Tokenize) {
                     throw "Unexpected token: " + store; // this is the error msg.
                 }
             }
-            vector<string> tok2;
-            tok2.push_back(store);
-            this -> data -> push(tok2);
+          //  vector<string> tok2;
+            tok.push_back(store);
+            //this -> data -> push(tok2);
         }
-        this -> lines++;
+        this  -> data -> push(tok);
     } // end while
 } // end method
 
@@ -48,7 +49,7 @@ The user is expected to call this method AFTER calling tokenize, other wise
 an error will be thrown indicating that no tokens are available.
 */
 vector<string>*Tokenizer::GetTokens() {
-  /*  vector<string> *myvec = new vector<string>();
+    vector<string> *myvec = new vector<string>();
     if((this -> data -> empty())) {
         throw "No tokens";
     }
@@ -56,19 +57,10 @@ vector<string>*Tokenizer::GetTokens() {
         myvec -> push_back(this -> data -> front().at(0));
         this -> data -> pop();
     }
-    return myvec; */
+    return myvec;
     //  ^^^^^In a panic I realizd after reading the directions again
     // I mucked it up before by returning the ENTIRE thing and not the set....
-    // sad night no sleep.
-    if((this -> data -> empty())) {
-        throw "No tokens";
-    }
-      vector<string> *myvec = new vector<string>();
-      vector<string> container = this -> data -> front(); // first set retrival
-
-    for(int i = 0; i < container.size(); i++) {
-      myvec -> push_back(container[i]);
-    }
-      this -> data -> pop();
-      return myvec;
+    // sad night no sleep..
+    // Looking at this again it seems to do what I want in theory, it just
+    // confusing for how to adapt when to print 
   }
