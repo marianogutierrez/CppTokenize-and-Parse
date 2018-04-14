@@ -35,13 +35,17 @@ using namespace std;
             std:: cout << e << std::endl;
             return 0;
         }
-        for(int i = 0; i < vecTokens -> size(); i++) {
-            tokContainer->push_back(vecTokens -> at(i));
+        for(int i = 0; i < vecTokens -> size() ; i++) {
+          if(i == vecTokens -> size() -1 ) {
+            cout << vecTokens -> at(i) << endl;
+          }
+          else {
+          cout << vecTokens -> at(i) << ",";
+          }
         }
         lineNum++;
-        tokContainer -> push_back("\0"); // to know when to print
     }
-
+/*
     for(int i = 0; i < tokContainer -> size(); i++) {
     if(tokContainer -> at(i) == "\0") {
         cout << endl;
@@ -52,7 +56,7 @@ using namespace std;
     else {
         cout << tokContainer->at(i) << ",";
     }
-}
+} */
     // memory management
     delete makeTokens;
     delete vecTokens;
