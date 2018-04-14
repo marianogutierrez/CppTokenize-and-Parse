@@ -45,7 +45,6 @@ using namespace std;
     for(int i = 0; i < tokContainer -> size(); i++) {
     if(tokContainer -> at(i) == "\0") {
         cout << endl;
-        
     }
     else if( i < tokContainer -> size() && tokContainer -> at(i + 1) == "\0") {
         cout << tokContainer -> at(i);
@@ -54,7 +53,6 @@ using namespace std;
         cout << tokContainer->at(i) << ",";
     }
 }
-
     // memory management
     delete makeTokens;
     delete vecTokens;
