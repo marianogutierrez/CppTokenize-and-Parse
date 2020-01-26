@@ -55,6 +55,6 @@ line by line.
  Finally, the text is printed from the input comma separated line by line.
  
  ### Prog2_4 compilation and Execute: 
-  ``` g++ prog2_4.cpp prog2_3.cpp prog2_1.cpp -o prog2_4 ```
-  ``` ./prog2_4 <text file> ```
+  - ``` g++ prog2_4.cpp prog2_3.cpp prog2_1.cpp -o prog2_4 ```
+  - ``` ./prog2_4 <text file> ```
  
