@@ -1,7 +1,7 @@
 Mariano Gutierrez
 margutierrez75@gmail.comm
 
-Files Included:
+# Files Included:
 
 prog2_1.cpp
 prog2_1.hpp
@@ -12,11 +12,11 @@ prog2_4.cpp
 README.md
 cs320programmingrubric.pdf
 
-prog2_1.cpp/prog2_1.hpp/prog2_2.cpp:
+# prog2_1.cpp/prog2_1.hpp/prog2_2.cpp:
 
 Example compilation: g++ prog2_2.cpp prog2_1.cpp -o prog2_2
 
-prog2_1.cpp && prog2_1.hpp:
+## prog2_1.cpp && prog2_1.hpp:
 This program makes use the header file prog2_1.hpp in order to implement a
 a Tokenizer object with a Tokenize and a GetTokens method.
 These methods tokenize, hence there name, text by ensuring that the text is valid
@@ -27,7 +27,7 @@ it to print correctly). Additionally, this program relies heavily on the string 
 function in c++ to delimit the line by spaces and properly check each word in the
 line of code fed into it. The program also allows numbers by checking ascii values.
 
-prog2_2.cpp:
+## prog2_2.cpp:
 This program looks for a file as its command line argument and tokenizes the text
 using error checking to mitigate any issues. Then it prints out the text separated by commas
 line by line.
@@ -36,12 +36,12 @@ line by line.
 
  Example compilation: g++ prog2_4.cpp prog2_3.cpp prog2_1.cpp -o prog2_4
 
- prog2_3.cpp  && prog2_3.hpp:
+ ## prog2_3.cpp  && prog2_3.hpp:
  This program makes use of the header file to create a Parser object. This object does not make
  use of any instance fields, but does have a bool parse method. The program parses
  to ensure proper order of syntax using a similar methodology as prog2_2.
 
- prog2_4.cpp:
+ ## prog2_4.cpp:
  This program is far more complex. It tokenize an input file
  sent from the command line argument and then makes use of a parser object to
  ensure correctness.
