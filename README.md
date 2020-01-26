@@ -53,3 +53,8 @@ line by line.
  This code takes the file resets the pointer to go back to the beginning of the file to
  begin parsing. This is necessary as the file was read once already from tokenizing.
  Finally, the text is printed from the input comma separated line by line.
+ 
+ ### Prog2_4 compilation and Execute: 
+  ``` g++ prog2_4.cpp prog2_3.cpp prog2_1.cpp -o prog2_4 ```
+  ``` ./prog2_4 <text file> ```
+ 
