@@ -13,8 +13,7 @@ README.md
 cs320programmingrubric.pdf
 
 # prog2_1.cpp/prog2_1.hpp/prog2_2.cpp:
-
-Example compilation: g++ prog2_2.cpp prog2_1.cpp -o prog2_2
+Example compilation: ``` g++ prog2_2.cpp prog2_1.cpp -o prog2_2 ```
 
 ## prog2_1.cpp && prog2_1.hpp:
 This program makes use the header file prog2_1.hpp in order to implement a
@@ -34,7 +33,7 @@ line by line.
 
  prog2_3.cpp/prog2_3.hpp/prog2_4.cpp:
 
- Example compilation: g++ prog2_4.cpp prog2_3.cpp prog2_1.cpp -o prog2_4
+ Example compilation: ``` g++ prog2_4.cpp prog2_3.cpp prog2_1.cpp -o prog2_4 ```
 
  ## prog2_3.cpp  && prog2_3.hpp:
  This program makes use of the header file to create a Parser object. This object does not make
