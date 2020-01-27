@@ -41,9 +41,11 @@ line by line.
  sent from the command line argument and then makes use of a parser object to
  ensure correctness.
  Of interest is the following code:
+ ```c++
  string tmp;
  file.clear(); //remove eof bit flag
  file.seekg(0,ios::beg); // reset the file to begin at start once more because we are reusing it
+ ```
 
  This code takes the file resets the pointer to go back to the beginning of the file to
  begin parsing. This is necessary as the file was read once already from tokenizing.
