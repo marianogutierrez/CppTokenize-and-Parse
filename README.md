@@ -28,8 +28,8 @@ This program looks for a file as its command line argument and tokenizes the tex
 using error checking to mitigate any issues. Then it prints out the text separated by commas
 line by line.
 
-prog2_1.cpp/prog2_1.hpp/prog2_2.cpp:
-Example compilation: ``` g++ prog2_2.cpp prog2_1.cpp -o prog2_2 ```
+- Example compilation: ``` g++ prog2_2.cpp prog2_1.cpp -o prog2_2 ```
+- Execute: ./prog2_2 <txtFile>
 
  ## prog2_3.cpp  && prog2_3.hpp:
  This program makes use of the header file to create a Parser object. This object does not make
